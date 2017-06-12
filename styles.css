@@ -8,30 +8,30 @@ body {
 .node {
   fill: rgba(255, 255, 255, 1);
   stroke: #ffffff;
-  stroke-width: 2px;
+  stroke-width: 0.15em;
   fill: #000000;
 }
 
 .selected {
   fill: rgba(255, 255, 255, 1);
-  stroke-width: 2px;
+  stroke-width: 0.15em;
 }
 
 .link {
   fill: none;
   stroke: rgba(255, 255, 255, 0.3);
-  stroke-width: 2px;
+  stroke-width: 0.15em;
 }
 
 line.selected {
   fill: none;
   stroke: rgba(255, 255, 255, 1);
-  stroke-width: 2px;
+  stroke-width: 0.15em;
 }
 
 text {
   font-family: sans-serif;
-  font-size: 12px;
+  font-size: 0.8em;
   fill: #ffffff;
   display: block;
   background-color: red;
@@ -65,7 +65,7 @@ g.tick text {
 .whole-tick {
   opacity: 0.15;
   transform: scale(1, 1);
-  stroke-width: 3px;
+  stroke-width: 0.2em;
 }
 
 

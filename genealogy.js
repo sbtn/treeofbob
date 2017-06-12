@@ -1,10 +1,12 @@
 var root = d3.hierarchy(bobs, function children(d) { return d.clones; });
 
-var nodeSize = 12;
+
 //var nodeSpacingWidth = 30;
 var nodeSpacingHeight = 800;
 var height = getWindowHeight();
 var width = height * 4; //improve
+
+var nodeSize = height/60;
 
 // Path trace
 var updatedLinks = null;
@@ -53,7 +55,7 @@ timeLine
   .attr('x1', function(d) { return timeScale(d); })
   .attr('y1', function(d) { return 30; })
   .attr('x2', function(d) { return timeScale(d); })
-  .attr('y2', function(d) { return 900; });
+  .attr('y2', function(d) { return height; });
 
 timeLine
   .append('text')
