@@ -4,9 +4,9 @@ var root = d3.hierarchy(bobs, function children(d) { return d.clones; });
 //var nodeSpacingWidth = 30;
 var nodeSpacingHeight = 800;
 var height = getWindowHeight();
-var width = height * 4; //improve
+var width = height * 5; //improve
 
-var nodeSize = height/60;
+var nodeSize = height / 60;
 
 // Path trace
 var updatedLinks = null;
@@ -33,9 +33,9 @@ g = svg.append("g")
   .attr("transform", "translate(0,50)")
 g.append("g").attr("class", "time-line")
   .attr("transform", "translate(0,-30)")
+g.append("g").attr("class", "date-bar")
 g.append("g").attr("class", "links")
 g.append("g").attr("class", "nodes")
-g.append("g").attr("class", "date-bar")
 
 var ticks = [];
 
@@ -59,12 +59,21 @@ timeLine
 
 timeLine
   .append('text')
+  .attr('class', 'time')
   .attr('x', function(d) { return timeScale(d); })
   .attr('y', '15px')
-  .attr('dx', '-1em')
+  .attr('dx', '-1.2em')
   .text(function(d) { return +d })
 
+var dateBar = svg.select('g.date-bar')
 
+dateBar
+  .append('line')
+  .attr('class', 'date-bar')
+  .attr('x1', function(d) { return 0; })
+  .attr('y1', function(d) { return 0; })
+  .attr('x2', function(d) { return 0; })
+  .attr('y2', function(d) { return height; })
 
 update();
 
@@ -87,7 +96,7 @@ function update() {
     .attr('cy', function(d) { return d.x; })
     .attr('r', nodeSize / 2)
     .on("mouseover", markPath)
-    //.on("mouseout", releasePath);
+  //.on("mouseout", releasePath);
 
   nodes.enter()
     .append('text')
@@ -106,16 +115,6 @@ function update() {
     .attr('y2', function(d) { return d.target.x; });
 
 }
-
-var dateBar = svg.select('g.date-bar')
-
-dateBar
-  .append('line')
-  .attr('x1', function(d) { return 0; })
-  .attr('y1', function(d) { return 0; })
-  .attr('x2', function(d) { return 0; })
-  .attr('y2', function(d) { return height; })
-
 
 function getLargestDepth(node) {
   var depths = getDepthsSize(node);

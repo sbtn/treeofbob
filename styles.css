@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  font-family: monospace;
   background-image: url("galaxy.jpg");
   /* http://nbremer.github.io/exoplanets/ */
 }
@@ -12,37 +14,38 @@ body {
   fill: #000000;
 }
 
-.selected {
-  fill: rgba(255, 255, 255, 1);
-  stroke-width: 0.15em;
-}
-
 .link {
   fill: none;
   stroke: rgba(255, 255, 255, 0.3);
   stroke-width: 0.15em;
 }
 
-line.selected {
-  fill: none;
+.selected {
+  fill: rgba(255, 255, 255, 1);
   stroke: rgba(255, 255, 255, 1);
-  stroke-width: 0.15em;
 }
 
 text {
-  font-family: sans-serif;
-  font-size: 0.8em;
   fill: #ffffff;
   display: block;
-  background-color: red;
 }
 
-line {
-  stroke: #fff;
+text.time {
+  font-size: 1.2em;
+  font-weight: 100;
 }
 
-path {
-  stroke: #fff;
+.date-bar {
+  stroke: rgba(255, 255, 255, 1);
+}
+
+.tick {
+  stroke: rgba(255, 255, 255, 0.15);
+}
+
+.whole-tick {
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 4px;
 }
 
 .svg-container {
@@ -53,25 +56,3 @@ path {
   vertical-align: top;
   overflow: hidden;
 }
-
-g.tick text {
-  /*transform: translate(18px, 0);*/
-}
-
-.tick {
-  opacity: 0.15;
-}
-
-.whole-tick {
-  opacity: 0.15;
-  transform: scale(1, 1);
-  stroke-width: 0.2em;
-}
-
-
-/*.svg-content {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-}*/
