@@ -2,7 +2,7 @@
 
 Interactive node tree mapping out the genealogy of the Bobs in the Bobiverse. From the 'We Are Legion (We are Bob)' book series.
 
-Found at https://github.com/sbtn/treeofbob
+Found at https://sbtn.github.io/treeofbob/
 
 
 With approximate year data collected from:
