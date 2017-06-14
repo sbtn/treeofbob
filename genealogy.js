@@ -6,7 +6,7 @@ var nodeSpacingHeight = 800;
 var height = getWindowHeight();
 var width = height * 5; //improve
 
-var nodeSize = height / 60;
+var nodeSize = 14;
 
 // Path trace
 var updatedLinks = null;
@@ -138,16 +138,6 @@ function separation(a, b) {
   return a.parent == b.parent ? 1 : 1;
 }
 
-function moveDateBar(d) {
-  d3.select(this)
-    .classed('selected', true);
-
-  dateBar
-    .transition()
-    .attr('y1', function() { return d.x; })
-    .attr('y2', function() { return d.x; });
-}
-
 function markPath(d) {
   root.each(function(node) {
     node.nodeInPath = false;
@@ -176,11 +166,6 @@ function markPath(d) {
     .transition()
     .attr('x1', function() { return d.y; })
     .attr('x2', function() { return d.y; });
-
-  // dateBar.select('text')
-  //   .transition()
-  //   .attr('x', function() { return d.y; })
-  //   .text(function() { return d.data.born; })
 
   update();
 }
