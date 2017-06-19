@@ -4,7 +4,7 @@ var root = d3.hierarchy(bobs, function children(d) { return d.clones; });
 //var nodeSpacingWidth = 30;
 var nodeSpacingHeight = 800;
 var height = getWindowHeight();
-var width = height * 5; //improve
+var width = height * 6; //improve
 
 var nodeSize = 14;
 

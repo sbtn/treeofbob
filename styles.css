@@ -28,6 +28,19 @@ body {
 text {
   fill: #ffffff;
   display: block;
+  text-shadow:
+  4px 4px 2px #000,
+  3px 3px 2px #000,
+  2px 2px 2px #000,
+  4px -4px 2px #000,
+  3px -3px 2px #000,
+  2px -2px 2px #000,
+  -2px -2px 2px #000,
+  -3px -3px 2px #000,
+  -4px -4px 2px #000,
+  -2px 2px 2px #000,
+  -3px 3px 2px #000,
+  -4px 4px 2px #000;
 }
 
 text.time {
